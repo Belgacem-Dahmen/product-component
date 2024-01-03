@@ -1,0 +1,203 @@
+/* 
+
+
+# Front-end Style Guide
+
+## Layout
+
+The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px
+
+
+## Typography
+
+### Body Copy
+
+- Font size (paragraph): 14px
+
+### Font
+
+- Family: [Montserrat](https://fonts.google.com/specimen/Montserrat)
+- Weights: 500, 700
+
+- Family: [Fraunces](https://fonts.google.com/specimen/Fraunces)
+- Weights: 700
+*/
+
+:root {
+
+    /* ### PRIMARY */
+
+    --Dark-cyan: hsl(158, 36%, 37%);
+    --Cream: hsl(30, 38%, 92%);
+    /* ### Neutral */
+    --Very-dark-blue: hsl(212, 21%, 14%);
+    --Dark-grayish-blue: hsl(228, 12%, 48%);
+    --White: hsl(0, 0%, 100%);
+
+}
+
+/* imports */
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap');
+/*  fonts to use
+    font-family: 'Fraunces', serif;
+    font-family: 'Montserrat', sans-serif;
+*/
+
+* {
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
+    height: 100vh;
+    background: var(--Cream);
+}
+
+p {
+    font-size: 16px;
+}
+
+.grid-container {
+    display: grid;
+    overflow: hidden;
+    grid-template-columns: 1fr 1fr;
+    width: 720px;
+    background: var(--White);
+    border-radius: 10px;
+}
+
+.image-mobile-container {
+    display: none;
+}
+
+.grid-container img {
+    width: 100%;
+}
+
+.description {
+    padding: 16px 32px;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    color: var(--Dark-grayish-blue);
+}
+
+.perfume {
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+
+.title {
+    color: var(--Very-dark-blue);
+    font-family: 'Fraunces', serif;
+    line-height: 36px;
+    font-weight: bolder;
+    font-size: 46px;
+
+}
+
+.paragraph {
+    max-width: 240px;
+    line-height: 25px;
+    font-weight: 500;
+    font-size: medium;
+}
+
+.price {
+    margin-bottom: 30px;
+    display: flex;
+}
+
+.discount-price {
+    color: var(--Dark-cyan);
+    font-family: 'Fraunces', serif;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.old-price {
+    text-decoration: line-through;
+    margin-left: 25px;
+    margin-top: 25px;
+
+}
+
+.description button {
+    padding: 20px 10px;
+    width: 100%;
+    background: var(--Dark-cyan);
+    color: var(--White);
+    border-radius: 10px;
+    border: none;
+    font-size: 17px;
+    font-weight: 700;
+    cursor: pointer;
+
+
+}
+
+.description button :hover {
+    background-color: green;
+
+
+}
+
+button svg {
+    margin-right: 10px;
+}
+
+
+/* - Mobile: 375px */
+@media screen and (max-width : 475px) {
+
+
+
+    body {
+        height: auto;
+    }
+
+    .grid-container {
+        margin: 10px;
+        display: flex;
+        flex-direction: column;
+        max-width: 350px;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .image-desktop-container {
+        display: none;
+    }
+
+    .image-mobile-container {
+        display: block;
+    }
+
+    .perfume {
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+    }
+
+    .title {
+        color: var(--Very-dark-blue);
+        font-family: 'Fraunces', serif;
+        line-height: 36px;
+        font-weight: bolder;
+        font-size: 36px;
+
+
+    }
+
+}
